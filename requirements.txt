@@ -1,0 +1,17 @@
+Flask==0.12.2
+Flask-Cors==3.0.2
+gunicorn==19.7.1
+Jinja2==2.9.6
+jsonschema==2.6.0
+lxml==3.7.3
+oauthlib==2.0.6
+pandas==0.20.1
+pandocfilters==1.4.1
+requests==2.14.2
+requests-oauthlib==0.8.0
+SQLAlchemy==1.1.9
+unicodecsv==0.14.1
+zipcode==2.0.0
+zipcodes==1.0.3
+numpy==1.12.1
+numpydoc==0.6.0
