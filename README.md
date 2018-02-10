@@ -14,7 +14,7 @@ Average age of residents
 Sales Tax
 score weights 
 
-![score-info](score_weights.png)"score info")
+![score-info](templates/score_weights.png)"score info")
 
 CitySlip displays interactive graphs of the following categories of data:
 
