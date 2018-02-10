@@ -1,1 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
 
+</html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cityslip</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <div class="header" id="myHeader">
+    <h2>City Slip</h2>
+  </div>
+  <div class = "content">
+      <br>
+  <body onload="runDef();">
+    <div class = "container-fluid" id="cont1">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #219B9D;">
+          <a class="navbar-brand" href="">CitySlip</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id = "zip_score">
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Score Factors
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="">Population</a>
+                  <a class="dropdown-item" href="">Age Demographics</a>
+                  <a class="dropdown-item" href="">Points of Interest</a>
+                  <a class="dropdown-item" href="">Walkability</a>
+                  <a class="dropdown-item" href="">Weather</a>
+                  <a class="dropdown-item" href="">Schools</a>
+                  <a class="dropdown-item" href="">Home Value</a>
+                  <a class="dropdown-item" href="">Rent</a>
+                  <a class="dropdown-item" href="">Crime Rate</a>
+                  <a class="dropdown-item" href="">Sales Tax</a>
+
+                </div>
+              </li> -->
+              <li class="nav=item">
+                <a class="nav-link" href="./static/about.html">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- <div class="row">
+            <div class="col-md-12 jumbotron text-center">
+                <h1>CitySlip</h1>
+                <p>Enter a zip code and start exploring!</p>
+            </div>
+        </div> -->
+        <div class="row">
+            <div class="col-md-2">
+                <div class="panel panel-primary">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="zip_code" placeholder="zip_code">
+                        <button type="button" class="btn btn-secondary" id="zip_button">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <!-- INSERT THE GAUGE CHART HERE -->
+                <div id="gauge"></div>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-7">
+                <!-- HOME CHARTS HERE-->
+                <div id="homes"></div>
+                <div class="chart"></div>
+
+            </div>
+
+            <div class="col-md-2">
+                <div class="panel-heading">
+                        <h3 class="panel-title">Score Components</h3>
+                    </div>
+                    <div id="score-metadata" class="panel-body">
+                      <div id="meta_list">
+                          <!-- INSERT THE METADATA HERE-->
+                      </div>
+                    </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- INSERT THE MAP HERE-->
+                <div id="map"></div>
+            </div>
+            <div class="col-md-4">
+                <!-- Population chart here -->
+                <div id="population"></div>
+                <br>
+                <br>
+                <div id="correlchart"></div>
+                  <div class="correl"></div>
+            </div>
+            <div class="col-md-4">
+                <!-- INSERT THE PIE CHARTS HERE -->
+                <div id="POI-pie"></div>
+                <div id="age-pie"></div>
+            </div>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-5">
+
+
+
+                </div>
+            <div class="col-md-4">
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+    <script type="text/javascript" src="{{ url_for('static', filename='plotbuilder.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='runDefault.js') }}"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='miriam.js') }}"></script>-->
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='re_graph.js') }}"></script>-->
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='census_plot.js') }}"></script>-->
+  </body>
+</html>
