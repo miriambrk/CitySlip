@@ -4,20 +4,14 @@ CitySlip is designed to help the user decide whether to move to a particular cit
 CitySlip computes a score based on the various variables. Weighting factors guide the calculations. For example, an affordable, pedestrian-friendly city with moderate temperatures and a low crime risk should yield a reasonably high score. Variables used to calculate the score are:
 
 - Average winter and summer temperatures
-
 - Affordability, based on recent home values, rentals, and market health index
-
--Crime Risk
-
--Walkability
-
--Number of schools
-
--Number of specific points of interest
-
--Population growth
--Average age of residents
--Sales Tax
+- Crime Risk
+- Walkability
+- Number of schools
+- Number of specific points of interest
+- Population growth
+- Average age of residents
+- Sales Tax
 
 ![score-info](score_weights.png "score info")
 
