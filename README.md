@@ -13,7 +13,7 @@ CitySlip computes a score based on the various variables. Weighting factors guid
 - Average age of residents
 - Sales Tax
 
-![score-info](score_weights.png "score info")
+![score-info](score_weights_sml.png "score info")
 
 CitySlip displays interactive graphs of the following categories of data:
 
