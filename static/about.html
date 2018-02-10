@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
 
+</html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cityslip</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+
+
+  </head>
+  <body>
+    <div class = "container-fluid" id="cont1">
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #219B9D;">
+          <a class="navbar-brand" href="/">CitySlip</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav=item">
+                <a class="nav-link" href="">About</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        </div>
+        <div class="row">
+          <div class="container sections-wrapper">
+              <div class="row">
+                  <div class="primary col-md-8 col-sm-12 col-xs-12">
+                    <section class="about section">
+                        <div class="section-inner">
+                            <h2 class="heading">About CitySlip</h2>
+                            <div class="content">
+                              <br><br>
+                              <p>CitySlip is designed to help the user decide whether to move to a particular city in the U.S. CitySlip evaluates the
+                                city based on various criteria and provides a score between 0 and 100, the higher the better.</p>
+                              <p>CitySlip computes a score based on the various variables. Weighting factors guide the calculations. For example,
+                                  an affordable, pedestrian-friendly city with moderate temperatures and a low crime risk should yield a reasonably high score.
+                                  Variables used to calculate the score are:</p>
+                                <ul>
+                                  <li>Average winter and summer temperatures</li>
+                                  <li>Affordability, based on recent home values, rentals, and market health index
+                                  <li>Crime Risk</li>
+                                  <li>Walkability</li>
+                                  <li>Number of schools</li>
+                                  <li>Number of specific points of interest</li>
+                                  <li>Population growth</li>
+                                  <li>Average age of residents</li>
+                                  <li>Sales Tax</li>
+                                </ul>
+                                <img src="score_weights.png" width="70%" alt="score weights" >
+                                <br>
+                                <br>
+                              <p>CitySlip displays interactive graphs of the following categories of data:</p>
+                              <ul>
+                                <li>Population Growth - 2010-2016</li>
+                                <li>Age Demographics</li>
+                                <li>Points of Interest (i.e., parks, theaters, stores)
+                                <li>Real Estate Sales and Rentals from 2014-2017
+                                <li>A map showing the location of the cities and scores that have been calculated thusfar
+                              </ul>
+                            </div>
+                          </div>
+                        </section>
+                      </div>
+
+
+                  </div><!--//content-->
+              </div><!--//section-inner-->
+
+        </div>
+
+
+
+
+
+  </body>
+</html>
