@@ -1,1 +1,254 @@
+.summary{
+    color: #219B9D;
+    font-size: 35px;
+}
 
+h2 {
+    color: #219B9D;
+    font-size: 25px;
+    text-align: center;
+}
+
+h6 {
+    color: #219B9D;
+    font-size: 14px;
+}
+
+p{
+    font-size: 20px;
+}
+
+body{
+    background: lightgray;
+    margin: 0;
+}
+
+.box {
+    background: white;
+    margin-top:120px;
+    margin-left:10px;
+    margin-right:10px;
+    padding: 20px;
+    align-content: center;
+    border-radius: 25px;
+    border: 2px solid #219B9D;
+  }
+
+.image{
+    display: block;
+    margin: auto;
+    width: 60%;
+}
+
+.visualization{
+    font-size: 16px;
+}
+
+tr:nth-of-type(odd) {
+    background-color: lightgrey;
+}
+
+.databox{
+        background: white;
+        margin-top:120px;
+        margin-left:150px;
+        margin-right:150px;
+        padding: 75px;
+        align-content: center;
+        border-radius: 25px;
+        border: 2px solid #219B9D;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compbox{
+    background: white;
+    margin-top:120px;
+    margin-left:150px;
+    margin-right:150px;
+    padding: 75px;
+    align-content: center;
+    border-radius: 25px;
+    border: 2px solid #219B9D;
+}
+
+.line {
+  fill: none;
+  stroke-width: 2px;
+}
+.green {
+  stroke: green;
+}
+.blue {
+  stroke: blue;
+}
+
+.chart::before {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  z-index: -1;
+  display: block;
+  width: 400px;
+  height: 300px;
+  content: " ";
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.correl::before {
+  position: absolute;
+  top: 50px;
+  left: 300px;
+  z-index: -1;
+  display: block;
+  width: 400px;
+  height: 300px;
+  content: " ";
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: cover;
+  opacity: 0.3;
+}
+
+.tooltip {
+  position: absolute;
+  width: 135px;
+  height: 30px;
+  padding: 2px;
+  padding-top: 8px;
+  font: 12px sans-serif;
+  color: white;
+  text-align: center;
+  background: #551aaf;
+  border: 0;
+  border-radius: 10px;
+}
+
+.tooltip2 {
+  position: absolute;
+  width: 135px;
+  height: 60px;
+  padding: 2px;
+  padding-top: 8px;
+  font: 12px sans-serif;
+  color: white;
+  text-align: center;
+  background: mediumvioletred;
+  border: 0;
+  border-radius: 10px;
+}
+
+.axis-text {
+  font-family: sans-serif;
+  font-weight: bold;
+  fill: #551aaf;
+  text-anchor: middle;
+}
+
+
+.x-unselected {
+  font-weight: lighter;
+}
+
+.x-selected {
+  font-weight: normal;
+}
+
+.active {
+  font-weight: normal;
+  fill: #551aaf;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive {
+  font-weight: lighter;
+  fill: #551aaf;
+  transition: fill 0.3s ease-out;
+  text-anchor: middle;
+}
+
+.inactive:hover {
+  fill: #e75480;
+  cursor: pointer;
+}
+
+.analysis {
+  font-family: sans-serif;
+  font: 12px;
+  border: 30px;
+}
+
+/* remove default margin and padding from body */
+body {
+  padding: 0;
+  margin: 0;
+}
+/* set map, body, and html to 100% of the screen size */
+#map,
+body,
+html {
+  height: 100%;
+}
+
+.legend {
+  line-height: 18px;
+  color: #555;
+}
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+}
+
+/* ======= Sections======= */
+.sections-wrapper {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.section {
+  margin-bottom: 30px;
+}
+.section .section-inner {
+  background: #fff;
+  padding: 30px;
+}
+.section .heading {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #545e69;
+  font-size: 24px;
+}
+.section .content .more-link .fa {
+  margin-right: 5px;
+  font-size: 14px;
+}
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+i:before
